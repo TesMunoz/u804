@@ -16,29 +16,58 @@ This is empty on purpose! Your code to build the resume will go here.
 
  	"name": name,
  	"role": role,
- 	"contactInfo": "(541)-326-2806",
+ 	"contacts":[ "Tesmunoz@gmail.com ", "(541)-326-2806 ", "https://github.com/TesMunoz "],
  	"picture": "images/myPic.JPG",
  	"skills": skillsList
  }
 
  $("#main").append(bio.name);
- $("#main").append(bio.contactInfo);
+ $("#main").append(bio.contacts);
  $("#main").append(bio.picture);
  $("#main").append(bio.skills);
 
- var work = {}
+ var work = {
+ 	"jobs": [
+ 	{
+		"position": "Student Intern ",
+ 		"employer": "Martin Sedirus",
+ 		"Loctation": "Portland State University: NEAR Lab, Portland, OR",
+ 		"length": "June 14 - Sept 14"
+ 	}
+  ]
+ }
 
- 	work.position = "Student Intern ";
- 	work.employer = "Martin Sedirus";
- 	work.Loctation = "Portland State University: NEAR Lab, Portland, OR";
- 	work.length = "June 14 - Sept 14";
+var education = { 
+	"schools": [
+	{
+ 		"name": "Portland State University",
+ 		"location": "Portland, OR",
+ 		"dates": "Sept 14 - Sept 15",
+ 		"degree": "None",
+ 		"major": ["Electrical Engineering"]
+ 	},
 
-var education = {}
+ 	{
+ 		"name": "Portland Community College",
+ 		"location": "Portland, OR",
+ 		"dates": "June 13 - Aug 13",
+ 		"degree": "none",
+ 		"major": ["Computer Science"]
+ 	} 
+  ]
+,
+	"online courses": [
+	{
+		"title": ["JavaScript Basics"],
+		"school": "Udacity",
+		"dates": "2016",
+		"url": "https://classroom.udacity.com/courses/ud804"
+	}
+  ]
+}
 
- 	education["school1"] = "Portland State University, Portland, OR:  Sept 14 - Sept 15";
- 	education["school2"] = "Portland Community College, Portland, OR: June 13 - Aug 13";
 
 
- $("#main").append(work["position"]);
- $("#main").append(education.school1);
+ $("#main").append(work.jobs);
+ $("#main").append(education.schools);
 
