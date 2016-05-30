@@ -13,10 +13,9 @@ This is empty on purpose! Your code to build the resume will go here.
  $("#header").prepend(formattedName);
 
  var bio = {
-
  	"name": name,
  	"role": role,
- 	"contacts":[ "Tesmunoz@gmail.com ", "(541)-326-2806 ", "https://github.com/TesMunoz "],
+ 	"contacts":[ " Tesmunoz@gmail.com ", "(541)-326-2806 ", "https://github.com/TesMunoz "],
  	"picture": "images/myPic.JPG",
  	"skills": skillsList
  }
@@ -28,16 +27,16 @@ This is empty on purpose! Your code to build the resume will go here.
 
  var work = {
  	"jobs": [
- 	{
-		"position": "Student Intern ",
- 		"employer": "Martin Sedirus",
- 		"Loctation": "Portland State University: NEAR Lab, Portland, OR",
- 		"length": "June 14 - Sept 14"
- 	}
+ 	// {
+		// "position": "Student Intern ",
+ 	// 	"employer": "Martin Sedirus",
+ 	// 	"Loctation": "Portland State University: NEAR Lab, Portland, OR",
+ 	// 	"length": "June 14 - Sept 14"
+ 	// }
   ]
  }
 
-var education = { 
+var educationList = { 
 	"schools": [
 	{
  		"name": "Portland State University",
@@ -46,14 +45,13 @@ var education = {
  		"degree": "None",
  		"major": ["Electrical Engineering"]
  	},
-
  	{
  		"name": "Portland Community College",
  		"location": "Portland, OR",
  		"dates": "June 13 - Aug 13",
- 		"degree": "none",
+ 		"degree": "None",
  		"major": ["Computer Science"]
- 	} 
+ 	}
   ]
 ,
 	"online courses": [
@@ -66,8 +64,25 @@ var education = {
   ]
 }
 
+var renderEducation = function(schools) {
+	schools.forEach(function(school) {
+		$('#education').append(
+			'<ul class="education-entry">' 
+			+ getListItem(school.name)
+			+ getListItem(school.location) 
+			+ getListItem(school.dates)
+			+ getListItem(school.degree)
+			+ getListItem(school.major)
+			+ '</ul><br />')
+	});
+}
+
+var getListItem = function(listItem) {
+	return '<li>' + listItem + '</li>'
+}
 
 
- $("#main").append(work.jobs);
- $("#main").append(education.schools);
+// $("#workExperience").prepend(work.jobs)
 
+
+renderEducation(educationList.schools);

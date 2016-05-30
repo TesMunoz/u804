@@ -77,7 +77,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       <h2>Where I've Lived and Worked</h2>
     </div>
     <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
+      <h2 class="orange center-text">Let's Connect</h2> 
+
         <ul id="footerContacts" class="flex-box">
       </ul>
     </div>
@@ -114,13 +115,13 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
 
     if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.display = 'none';
+      document.getElementById('topContacts').style = "background-color: black;"
     }
     if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
+      document.getElementById('header').style = "background-color: black;"
     }
     if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
+      document.getElementById('workExperience').style = "background-color: black;"
     }
     if(document.getElementsByClassName('project-entry').length === 0) {
       document.getElementById('projects').style.display = 'none';
