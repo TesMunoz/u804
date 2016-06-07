@@ -16,15 +16,22 @@ This is empty on purpose! Your code to build the resume will go here.
  	"name": name,
  	"role": role,
  	"contacts":[ " Tesmunoz@gmail.com ", "(541)-326-2806 ", "https://github.com/TesMunoz "],
- 	"picture": "images/myPic.JPG",
+ 	"picture": '<img src="images/myPic.JPG" alt="Picture of Tessa Munoz" style="width:150px; height:150x;">',
  	"skills": skillsList
  }
 
- $("#main").append(bio.name);
- $("#main").append(bio.contacts);
- $("#main").append(bio.picture);
- $("#main").append(bio.skills);
+ $("#header").append(bio.picture);
+ $("#header").append(bio.contacts);
 
+var getListItem = function(listItem) {
+	return '<li>' + listItem + '</li>'
+}
+
+ $("#skills").append(
+	'<ul class="skillsList">' 
+			+ getListItem(bio.skills)
+			+ '</ul><br />');
+ 
  var work = {
  	"jobs": [
  	// {
@@ -76,13 +83,6 @@ var renderEducation = function(schools) {
 			+ '</ul><br />')
 	});
 }
-
-var getListItem = function(listItem) {
-	return '<li>' + listItem + '</li>'
-}
-
-
-// $("#workExperience").prepend(work.jobs)
 
 
 renderEducation(educationList.schools);

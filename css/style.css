@@ -18,6 +18,7 @@ h6 {
   overflow: auto;
 }
 
+.skillsList,
 .education-entry,
 .work-entry,
 .project-entry {
@@ -26,7 +27,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #00BCD4;
   line-height: 48px;
   display: inline;
 }
@@ -129,7 +130,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #797373;
 }
 
 .flex-box {
@@ -158,6 +159,7 @@ ul {
 
 img {
   padding: 10px;
+  
 }
 
 span {

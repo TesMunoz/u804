@@ -72,6 +72,9 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     </div>
     <div id="education" class="gray">
       <h2>Education</h2>
+     </div> 
+    <div id = "skills" class ="gray" style = "background-color: #6BF39B">
+      <h2>Skills</h2>
     </div>
     <div id="mapDiv">
       <h2>Where I've Lived and Worked</h2>
@@ -115,19 +118,19 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
 
     if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style = "background-color: black;"
+      document.getElementById('topContacts').style = "background-color: pink;"
     }
     if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style = "background-color: black;"
+      document.getElementById('header').style = "background-color: pink;"
     }
     if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style = "background-color: black;"
+      document.getElementById('workExperience').style = "background-color: pink;"
     }
     if(document.getElementsByClassName('project-entry').length === 0) {
       document.getElementById('projects').style.display = 'none';
     }
-    if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
+    if(document.getElementsByClassName('education-entry').length !== 0) {
+      document.getElementById('education').style = "background-color:#AD33AD;"
     }
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('lets-connect').style.display = 'none';
